@@ -1,0 +1,692 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body {
+    width: 100%;
+    background-color: #e7eff5;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+header {
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding-left: 6vw;
+    padding-right: 7vw;
+    height: 70px;
+    position: fixed;
+    box-shadow: 5px 5px 5px 2px gainsboro;
+    z-index: 999;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.applybtn {
+    background-color: #336AEA;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    margin-left: 10vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border: none;
+    border-radius: 10px;
+}
+
+.applybtn:hover {
+    background-color: #336AEA;
+    border-color: #a0dee2;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #2e75b5;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #336AEA;
+    cursor: pointer;
+}
+
+.active {
+    color: #336AEA;
+}
+
+.navitem {
+    list-style-type: none;
+    padding-left: 30px;
+    font-size: medium;
+    font-weight: bolder;
+
+}
+
+.infoContainer {
+    margin: 144px;
+    margin-top: 85px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Fira Sans', sans-serif;
+    padding: 30px;
+    margin-right: 0px;
+    /* background-color: white; */
+    /* border: solid 2px #4990cd; */
+    height: 27rem;
+    margin-top: 35px;
+    gap: 20px;
+    display: block;
+    transform: translateX(-100%);
+    transition: transform 1.5s;
+    /* Add a transition effect */
+    z-index: -1;
+    /* box-shadow: 0 4px 8px 0 #2E75B5, 0 6px 20px 0 #2E75B5; */
+}
+
+.animate-info {
+    transform: translateX(0);
+}
+
+
+
+
+.pic {
+    width: auto;
+    height: 450px;
+    transform: translateX(0);
+    /* Start at the original position */
+    transition: transform 0.9s;
+    transform-origin: center;
+    z-index: -1;
+}
+
+.pic {
+    animation: moveImage 1.5s forwards;
+    /* Use a keyframes animation to move the image */
+}
+
+@keyframes moveImage {
+    from {
+        transform: translateX(100%);
+        /* Move the image off-screen */
+    }
+
+    to {
+        transform: translateX(0);
+        /* Move the image back to its original position */
+    }
+}
+
+
+@media screen and (max-width: 440px) {
+    .pic {
+        height: auto;
+        z-index: -1;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+}
+
+
+.kr {
+    font-size: 65px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #2E75B5;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sub {
+    font-size: 30px;
+    color: #2E4374;
+    /* font-weight:bold; */
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.co {
+    font-size: 45px;
+    color: #2E4374;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.code {
+    margin-left: 26px;
+}
+
+.explorebtn {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    background-color: #336AEA;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+/*--------about css starts-----*/
+
+.heading {
+    background-color: #2e75b5;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* color: #4fcfbd; */
+    color: white;
+    width: 20vw;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.aboutpara {
+    background-color: #fbfaf5;
+    color: #333;
+    font-size: 20px;
+    margin: 100px 100px;
+    padding: 20px;
+    animation: fadeIn 2s;
+    box-shadow: 0 4px 8px 0 #2E75B5, 0 6px 20px 0 #2E75B5;
+    border-radius: 20px;
+}
+
+.aboutpara p {
+    margin: 20px;
+}
+
+
+.aboutgirl {
+    margin-top: -80px;
+    width: 550px;
+    height: auto;
+    float: right;
+}
+
+@media (max-width:650px) {
+    .aboutgirl {
+        width: 80vw;
+    }
+}
+
+/*--------about css ends-----*/
+
+
+/* Style the 'courses' section */
+#courses {
+    padding: 0px 50px;
+    text-align: center;
+    /* background-color: #FFF6F4; */
+}
+
+.cardheading {
+    background-color: #2e75b5;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* color: #4fcfbd; */
+    color: white;
+    width: 20vw;
+    margin-left: -30px;
+    margin-bottom: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-top: 100px;
+}
+
+.coursecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: -1;
+    background-color: #FFF6F4;
+    padding: 50px;
+}
+
+/* Style individual course cards */
+.coursecontainer>div {
+    flex: 0 0 calc(22.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.coursecontainer>div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style course images */
+.same {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add some spacing and styles to headings and descriptions */
+h1,
+h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+p {
+    margin: 5px 0;
+    color: #666;
+}
+
+
+@media (max-width: 768px) {
+
+    #courses {
+        padding: 10px;
+    }
+
+    .coursecontainer>div {
+        flex: 0 0 calc(90% - 40px);
+        /* Adjusted for mobile screens */
+        padding: 10px;
+        /* Adjusted for mobile screens */
+    }
+
+    .cardheading {
+        width: 300px;
+    }
+}
+
+
+
+/*-------contact css------*/
+
+
+/* Center the contact container */
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Adjust the height as needed for proper alignment */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 850px;
+    /* Adjust as needed */
+    width: 100%;
+    background-color: #e7eff5;
+    /* Add background color to the container */
+    padding: 0px;
+    /* Add some padding for spacing */
+}
+
+/* Left Box (Contact Details) */
+.contact-details {
+    flex: 1;
+    margin-right: 20px;
+    /* Maintain distance between left and right boxes */
+    padding: 20px;
+    border: 1px solid #336AEA;
+    border-radius: 10px;
+    background-color: #fff;
+    /* Add a white background */
+    width: 410px;
+    /* Adjust the width */
+    height: 440px;
+    /* Adjust the height */
+    line-height: 1.6;
+    /* Adjust line height for better readability */
+}
+
+/* Right Box (Form Section) */
+.form-section {
+    flex: 1;
+    padding: 20px;
+    line-height: 3%;
+    border: 1px solid #336AEA;
+    border-radius: 10px;
+    background-color: #fff;
+    /* Add a white background */
+    width: 430px;
+    /* Adjust the width */
+    height: 440px;
+    /* Adjust the height */
+
+}
+
+/* Form Styles */
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form label {
+    display: block;
+    margin: 10px 0;
+    line-height: 2;
+    /* Adjust line height for better readability */
+}
+
+.form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #336AEA;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* Add some space between form elements */
+}
+
+.form input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #336AEA;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* Add some space between form elements */
+}
+
+.btn {
+    background-color: #336AEA;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Additional Styles */
+.contact-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-container .il {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contact-container .icon {
+    margin-right: 10px;
+}
+
+.contact-container .lp {
+    line-height: 1.5;
+    /* Adjust line height for better readability */
+}
+
+/* Media Query for Mobile Screens (up to 768px) */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        /* Change to a column layout for mobile screens */
+        margin-top: 250px;
+        align-items: center;
+        width: 100vw;
+    }
+
+    /* Reset some styles for better mobile display */
+    .contact-details,
+    .form-section {
+        margin-left: 0px;
+        max-width: 80%;
+        /* Full width for mobile */
+        margin-right: 0;
+    }
+
+    .form {
+        max-width: 95%;
+        /* Full width for mobile */
+        margin: 0 auto;
+    }
+
+    .heading {
+        width: 100px;
+    }
+
+}
+
+/*--------contact css end-----*/
+
+.same {
+    height: 6rem;
+    width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:650px) {
+
+    .nav li {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 35px;
+        margin: 0px;
+    }
+
+    .info {
+        padding: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 10px;
+        width: 70vw;
+        height: auto;
+        margin-top: 50px;
+
+    }
+
+
+
+    .form-section {
+        margin-left: 0px;
+        max-width: 80%;
+        /* Full width for mobile */
+        margin-right: 0;
+    }
+
+    .form {
+        max-width: 95%;
+        /* Full width for mobile */
+        margin: 0 auto;
+    }
+
+
+
+    .explorebtn {
+        padding: 10px 20px;
+        margin-top: 10px;
+    }
+
+    .heading {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        font-size: 1em;
+        margin-bottom: 0px;
+    }
+
+    .cheading {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        font-size: 0.8em;
+        margin-bottom: 0;
+    }
+
+    .kr {
+        font-size: 3.5em;
+    }
+
+    .co {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    #about {
+        margin: 0px;
+        padding: 0px;
+        width: 100vw;
+    }
+
+    .aboutpara {
+        width: auto;
+        padding: 10px;
+        margin: 50px 20px;
+        text-align: justify;
+    }
+
+    .coursecontainer {
+        padding: 30px;
+        padding: 0px;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form {
+
+        left: 20px;
+        width: 400px;
+        margin: 10px;
+        padding: 0;
+
+    }
+
+    form {
+        padding: 0px;
+        width: 100%;
+        margin: 0px;
+    }
+
+    pre {
+        text-align: justify;
+    }
+
+    .contactinfo {
+        margin: 0px;
+        margin-bottom: 50px;
+        padding: 0;
+    }
+
+    input {
+        width: 300px;
+    }
+
+    select {
+        width: 315px;
+    }
+
+    .para {
+        font-size: 4px;
+    }
+}
+
+@media (min-width:651px) and (max-width:1100px) {
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*--------review css starts-----*/
+
+.review {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.review img {
+    height: 270px;
+    width: auto;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+@media (max-width:650px) {
+
+    .review img {
+        height: 270px;
+        width: 90vw;
+        border-radius: 20px;
+        margin: 10px;
+    }
+}
+
+/*--------review css end-----*/
